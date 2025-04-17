@@ -1,128 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Barrett Wang Homepage</title>
+<head>
+  <meta charset="UTF-8">
+  <title>Barrett Wang Homepage</title>
+  <style>
+    /* reset */
+    body {
+      margin: 0;
+      height: 100%;
+      font-family: sans-serif;
+    }
 
-        <style>
-            @font-face {
-                font-family: 'Title';
-                src: url('Fonts/LilitaOne-Regular.ttf');
-                font-weight: normal;
-                font-style: normal;
-            }
+    /* ========== LEFT BAR ========== */
+    #left_bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 100vh;
+      background-color: #f7f7da;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      z-index: 20;
+    }
+    #left_bar img {
+      width: 200px;
+      height: 200px;
+      border-radius: 80%;
+      object-fit: cover;
+      object-position: 0 0; 
+      border: 2px solid white;
+    }
 
-            #info{
-                width: 100%;
-                height: 600px;
-                padding: 0;
-                text-align: center;
-                background-color: beige;
-                font-size: 55px;
-            }
+    /* ========== TOP BAR ========== */
+    #top_bar {
+      position: fixed;
+      top: 0;
+      left: 300px;      
+      right: 0;         
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; 
+      background-color: #fff;
+      border-bottom: 1px solid #ccc;
+      z-index: 10;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
 
-            #top-bar{
-                width: 100%;
-                height: 20px;
-                background-color: white;
-                font-size: 20px;
-                text-align: right;
-            }
+    .top_bar_item {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 70px;
+      height: 50px;
+      margin-left: 10px;   
+      margin-right: 8px;       
+      transition: transform .2s, background .2s;
+    }
+    .top_bar_item img {
+      width: 50px;
+      height: 55px;
+      display: block;
+      opacity: 80%;
+    }
 
-            .contact{
-                height: 20px;
-                display: inline-block;
-                text-decoration: none;
-                padding-left: 5px;
-                color: gray;
+    #main_page {
+      margin-top: 50px;    /* below the top bar */
+      margin-left: 300px;  /* to the right of the sidebar */
+      padding: 20px;
+    }
 
-            }
+  </style>
+</head>
+<body>
+    <img src="Pics/sc.png" alt="sc" style="width: 30px; height: 40px; position: fixed; top: 5px; left: 5px; z-index: 30;">
+    <div id="top_bar">
+        <a href="https://github.com/Barrettwmq"
+           class="top_bar_item">
+          <img src="Pics/github.png" alt="GitHub">
+        </a>
 
-            .contact a{
-                text-decoration: none;
-                color: inherit;
-            }
+        <a href="" class="top_bar_item">
+            <img src="Pics/linkedin.png" alt="linkedin" style="height: 45px; width: 50px; display: block; opacity: 80%;">
+        </a>
+    
+    </div>
 
-            .contact #resume_link:hover{
-                cursor: pointer;
-            }
+    <div id="left_bar">
+    <img src="Pics/me.png" alt="me">
+    <div class="navi">
+        <a href="#main_page" style="text-decoration: none;">Intro</a>
+    </div>
+    </div>
 
-            h1{
-                margin: 0;
-                padding-top: 0;
-                font-family: 'Title';
-            }
+    
+     <div class= "Intro" id="main_page">
+        <div class="intro" style="display:flex; align-content: center; justify-content: center;">
+            <p style="margin: 20px 70px; font-size: 20px;">Hi, welcome to my page! This is Barrett, class of 2025 of University of Southern California (USC). I was born in Qingdao, China, a beautiful coastal city in Shandong Province, which is famous for the Tsingdao Beer🍺. With much talent in sports, I played basketball since I was 5 years old and played half-professionally back in high school in China. Other than that, I did football, equestrianism, swim, etc<br><br>
+                My expertise includes Python, C++, C#, Java, Go, HTML, CSS, Javascript, and SQL. My research interests are <strong>speech recognition</strong>, <strong>natural language processing (NLP)</strong>, <strong>signal processing</strong>, and <strong>LLM</strong>. Previously, I was researching at Signal Analysis and Interpretation Laboratory (SAIL) at USC with Prof. Shrikanth Narayanan, focusing on the topic of enhancing conversational emotion recognition by Large language model. <br><br>
+                Feel free to reach out and explore opportunities and collaborations!
+            </p>
+        </div>
+    <div>
+    
 
-            .info_image{
-                display:inline-block; 
-                position: relative; 
-                top: 150px;
-                margin: 20px;
-                opacity: 0;
-                height: 175px;
-            }
+</body>
+</html>
 
-            #sc_header img{
-                height: 50px;
-                width: auto;
-                position: absolute;
-                top: 27px;
-                left: 8px;
-                background: transparent;
-            }
-
-            .option1:hover, .option2:hover, .option3:hover{
-                cursor: pointer;
-                background-color: #990000;
-                color: #FFC72C;
-            }
-
-            .read_more:hover{
-                color: maroon;
-                cursor: pointer;
-            }
-
-            #caption1{
-                background-color: rgba(0,0,0,0.6); 
-                width:450px; 
-                height:300px; 
-                position: absolute; 
-                top: 0; 
-                left: 0; 
-                justify-content: center; 
-                align-content: center; 
-                text-align: center; 
-                color:white;
-                visibility: hidden;
-            }
-
-            #caption2{
-                background-color: rgba(0,0,0,0.6); 
-                width:100%; 
-                height:100%; 
-                position: absolute; 
-                top: 0; 
-                left: 0; 
-                justify-content: center; 
-                align-content: center; 
-                text-align: center; 
-                color:white;
-                visibility: hidden;
-            }
-
-            #img1:hover, #img2:hover{
-                opacity: 0.5;
-            }
-            #img1:hover #caption1, #img2:hover #caption2{
-                visibility: visible;
-            }
-
-        </style>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js">
-        </script>
-    </head>
-    <body>
-        <div id="info">
+<!-- <div id="info">
             <div id="top-bar">
                 <div class="contact">School: University of Southern California </div>
                 <div class="contact"><p>Tel: 213-421-7427</p></div>
@@ -311,6 +301,4 @@
                 });
             });
             
-        </script>
-    </body>
-</html>
+        </script> -->
